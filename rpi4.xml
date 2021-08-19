@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="github"   fetch="https://github.com" />
+        <remote name="tfo"      fetch="https://git.trustedfirmware.org" />
+
+        <default remote="github" revision="master" />
+
+        <!-- OP-TEE gits -->
+        <project path="optee_client"         name="OP-TEE/optee_client.git" revision="refs/tags/3.13.0" clone-depth="1" />
+        <project path="optee_os"             name="OP-TEE/optee_os.git" revision="refs/tags/3.13.0" clone-depth="1" />
+        <project path="optee_test"           name="OP-TEE/optee_test.git" revision="refs/tags/3.13.0" clone-depth="1" />
+        <project path="build"                name="OP-TEE/build.git" revision="refs/tags/3.13.0" clone-depth="1">
+        </project>
+
+        <!-- linaro-swg gits -->
+        <project path="linux"                name="raspberrypi/linux.git"                  revision="rpi-5.4.y" clone-depth="1" />
+        <project path="optee_benchmark"      name="linaro-swg/optee_benchmark.git"         revision="refs/tags/3.13.0" clone-depth="1"/>
+        <project path="optee_examples"       name="linaro-swg/optee_examples.git"          revision="refs/tags/3.13.0" clone-depth="1" />
+
+        <!-- Misc gits -->
+        <project path="buildroot"            name="buildroot/buildroot.git"               revision="refs/tags/2021.02" clone-depth="1" />
+        <project path="firmware"             name="raspberrypi/firmware.git"              revision="refs/tags/1.20190401" clone-depth="1" />
+        <project path="trusted-firmware-a"   name="TF-A/trusted-firmware-a.git"           revision="refs/tags/v2.2" clone-depth="1" remote="tfo"/>
+        <project path="u-boot"               name="u-boot/u-boot.git"                     revision="aac0c29d4b8418c5c78b552070ffeda022b16949" />
+</manifest>
